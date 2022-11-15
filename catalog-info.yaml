@@ -1,0 +1,25 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: S3
+  description: Deploy S3 with backstage along with github actions (Terrraform env)
+  annotations:
+     backstage.io/techdocs-ref: dir:./docs
+     github.com/project-slug: sdelbusto/master-s3
+spec:
+  type: service
+  owner: infrastructure
+  lifecycle: production
+  providesApis:
+    - S3
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: S3
+  description: Deploy S3 with backstage along with github actions (Terrraform env)
+spec:
+  type: internal
+  lifecycle: production
+  owner: matt@doics.co
+  definition: "Deploy S3 with backstage along with github actions (Terrraform env)"
